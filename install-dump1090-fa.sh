@@ -18,7 +18,7 @@ echo ""
 echo -e "\e[33mMOVING INTO CLONED DIRECTORY ....\e[39m"
 cd ${PWD}/dump1090-fa
 echo ""
-echo -e "\e[33mBUILDING DUMP1090-MUTABILITY PACKAGE ....\e[39m"
+echo -e "\e[33mBUILDING DUMP1090-FA PACKAGE ....\e[39m"
 dpkg-buildpackage -b
 echo ""
 echo -e "\e[33mINSTALLING THE DUMP1090-FA PACKAGE ....\e[39m"
