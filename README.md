@@ -6,7 +6,7 @@
 ### INSTALL FR24FEED: 
 **Copy-paste following command in SSH console and press Enter key. </br>
 The script will install and configure fr24feed.** </br></br>
-`sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/fr24feed-debian-ubuntu-amd64/master/install-fr24feed.sh)"` </br></br></br>
+`sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/fr24feed-debian-ubuntu-amd64/master/install-fr24feed_1.0.24-5_amd64.tgz.sh)"` </br></br></br>
 ### INSTALL DUMP1090:
 The above fr24feed install script does **NOT** install or include installation of lighttpd and any version of dump1090. </br>
 The user should himself/herself install lighttpd and dump1090 (mutability or flightaware version) </br>
