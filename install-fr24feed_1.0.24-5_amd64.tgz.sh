@@ -24,7 +24,7 @@ fr24key=""
 
 bs="no"
 raw="no"
-logmode="0"
+logmode="1"
 windowmode="0"
 mpx="no"
 mlat="yes"
