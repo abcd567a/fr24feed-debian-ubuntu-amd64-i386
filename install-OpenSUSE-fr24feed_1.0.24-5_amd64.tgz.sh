@@ -40,7 +40,7 @@ echo "Creating user fr24 to run service"
 sudo useradd --system fr24
 
 echo "Creating Service file fr24feed.service"
-SERVICE_FILE=/etc/systemd/system/fr24feed.service
+SERVICE_FILE=/usr/lib/systemd/system/fr24feed.service
 sudo touch ${SERVICE_FILE}
 sudo chmod 777 ${SERVICE_FILE}
 /bin/cat <<EOM >${SERVICE_FILE}
