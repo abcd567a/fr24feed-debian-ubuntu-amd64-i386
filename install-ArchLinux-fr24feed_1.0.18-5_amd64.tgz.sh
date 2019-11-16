@@ -84,7 +84,7 @@ echo -e "\e[39m           sudo systemctl restart fr24feed \e[39m"
 echo " "
 
 echo -e "\e[32m   (b) Alternatively signup using following command\e[39m"
-echo -e "\e[39m         sudo nano fr24feed --signup \e[39m"
+echo -e "\e[39m         sudo fr24feed --signup \e[39m"
 echo " "
 echo -e "\e[32m(2) In your browser, go to web interface at\e[39m"
 echo -e "\e[39m     http://$(ip route | grep -m1 -o -P 'src \K[0-9,.]*'):8754 \e[39m"
