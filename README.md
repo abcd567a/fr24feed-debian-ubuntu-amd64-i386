@@ -79,7 +79,7 @@ http-timeout=20
 
 
 **TO UNINSTALL FR24FEED** </br>
-To completely remove configuration and all files, give following 4 commands:
+To completely remove configuration and all files, give following 7 commands:
 ```
 sudo systemctl stop fr24feed 
 sudo systemctl disable fr24feed 
@@ -87,6 +87,7 @@ sudo rm /lib/systemd/system/fr24feed.service
 sudo rm -rf /usr/share/fr24 
 sudo rm /usr/bin/fr24feed
 sudo rm /etc/fr24feed.ini 
+sudo rm -rf /var/log/fr24feed/fr24feed.log  
 ```
 
 </br>
