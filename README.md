@@ -87,7 +87,7 @@ sudo rm /lib/systemd/system/fr24feed.service
 sudo rm -rf /usr/share/fr24 
 sudo rm /usr/bin/fr24feed
 sudo rm /etc/fr24feed.ini 
-sudo rm -rf /var/log/fr24feed/fr24feed.log  
+sudo rm -rf /var/log/fr24feed  
 ```
 
 </br>
