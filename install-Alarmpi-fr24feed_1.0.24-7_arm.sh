@@ -2,6 +2,7 @@
 
 echo "Downloading binary fr24feed for arm from Github"
 sudo wget -O /usr/bin/fr24feed "https://github.com/abcd567a/fr24feed-debian-ubuntu-amd64/releases/download/ver1/fr24feed"
+sudo chmod +x /usr/bin/fr24feed
 
 echo "Creating config file fr24feed.ini"
 CONFIG_FILE=/etc/fr24feed.ini
