@@ -29,7 +29,7 @@ logpath="/var/log/fr24feed/"
 windowmode="0"
 mpx="no"
 mlat="no"
-mlat-without-gps="yes"
+mlat-without-gps="no"
 use-http=yes
 http-timeout=20
 
