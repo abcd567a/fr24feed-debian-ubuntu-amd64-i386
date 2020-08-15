@@ -6,7 +6,7 @@
 ### INSTALL FR24FEED: 
 **Copy-paste following command in SSH console and press Enter key. </br>
 The script will install and configure fr24feed.** </br></br>
-`sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/fr24feed-debian-ubuntu-amd64/master/install-fr24feed_1.0.24-5_amd64.tgz.sh)"` </br></br></br>
+`sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/fr24feed-debian-ubuntu-amd64/master/install-fr24feed_1.0.25-3_amd64.tgz.sh)"` </br></br></br>
 
 **Caution:** </br>
 MLAT is supported only for Raspberry Pi feeder. </br>
