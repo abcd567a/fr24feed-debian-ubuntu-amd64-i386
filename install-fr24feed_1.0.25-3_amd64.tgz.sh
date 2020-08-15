@@ -5,11 +5,11 @@ INSTALL_FOLDER=/usr/share/fr24
 echo "Creating folder fr24"
 sudo mkdir ${INSTALL_FOLDER}
 echo "Downloading fr24feed amd64 binary file from Flightradar24"
-sudo wget -O ${INSTALL_FOLDER}/fr24feed_1.0.24-5_amd64.tgz "https://repo-feed.flightradar24.com/linux_x86_64_binaries/fr24feed_1.0.24-5_amd64.tgz"
+sudo wget -O ${INSTALL_FOLDER}/fr24feed_1.0.25-3_amd64.tgz "https://repo-feed.flightradar24.com/linux_x86_64_binaries/fr24feed_1.0.25-3_amd64.tgz"
 
 
 echo "Unzipping downloaded file"
-sudo tar xvzf ${INSTALL_FOLDER}/fr24feed_1.0.24-5_amd64.tgz -C ${INSTALL_FOLDER}
+sudo tar xvzf ${INSTALL_FOLDER}/fr24feed_1.0.25-3_amd64.tgz -C ${INSTALL_FOLDER}
 sudo cp ${INSTALL_FOLDER}/fr24feed_amd64/fr24feed /usr/bin/
 
 echo "Creating config file fr24feed.ini"
