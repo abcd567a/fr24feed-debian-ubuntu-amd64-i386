@@ -27,7 +27,7 @@ Install only ONE of following three versions of dump1090. Installing more than o
 > **(2) For Debian 10 and Ubuntu 19 (dump1090-mutability EB_VERSION)** </br>
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/fr24feed-debian-ubuntu-amd64/master/install-dump1090-mut-eb-ver.sh)"`  </br></br>
 
-> **(3) For Debian 9 & 10 and Ubuntu 18 & 19 (dump1090-fa)** </br>
+> **(3) For Debian 9, 10, & 11 and Ubuntu 18, 20, & 22 (dump1090-fa)** </br>
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/fr24feed-debian-ubuntu-amd64/master/install-dump1090-fa.sh)"` </br></br>
 </br>
 
