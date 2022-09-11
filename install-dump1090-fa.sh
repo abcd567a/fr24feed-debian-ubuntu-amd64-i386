@@ -16,6 +16,8 @@ elif [[ ${OS_VERSION} == focal ]]; then
   OS_VERSION=buster
 elif [[ ${OS_VERSION} == jammy ]]; then
   OS_VERSION=bullseye
+elif [[ ${OS_VERSION} == bookworm ]]; then
+  OS_VERSION=bullseye
 fi
 
 echo "TRANSLATED VER" ${OS_VERSION}
@@ -23,6 +25,7 @@ echo "TRANSLATED VER" ${OS_VERSION}
 echo -e "\e[32mInstalling Build tools and Build dependencies\e[39m"
 
 ##Build-Tools
+if [[ ${OS_VERSION} == stretch ]]; then sudo apt install -y devscripts; fi
 sudo apt install -y git
 sudo apt install -y build-essential
 
