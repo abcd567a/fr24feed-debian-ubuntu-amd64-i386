@@ -21,17 +21,12 @@ echo "Writing code to config file fr24feed.ini"
 receiver="beast-tcp"
 host="127.0.0.1:30005"
 fr24key=""
-
 bs="no"
 raw="no"
 logmode="1"
 logpath="/var/log/fr24feed/"
-windowmode="0"
-mpx="no"
 mlat="no"
 mlat-without-gps="no"
-use-http=yes
-http-timeout=20
 
 EOM
 
