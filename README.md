@@ -20,7 +20,7 @@ Install only ONE of following three versions of dump1090. Installing more than o
 </br>
 
 
-#### STEP-2: INSTALL FR24FEED: 
+### STEP-2: INSTALL FR24FEED: 
 **issue following commands:** </br>
 **(2.1) Download fr24feed debian Package** </br>
 `wget https://repo-feed.flightradar24.com/linux_x86_64_binaries/fr24feed_1.0.34-0_amd64.deb   ` 
