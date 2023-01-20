@@ -9,13 +9,13 @@ Below are scripts which will install lighttpd (essential to display map), and du
 **Caution:** </br>
 Install only ONE of following three versions of dump1090. Installing more than one version of dump1090 will break the installation </br>
 
-> **Option (1): For Debian 9 and Ubuntu 18 (dump1090-mutability ver 1.15)** </br>
+ **Option (1): For Debian 9 and Ubuntu 18 (dump1090-mutability ver 1.15)** </br>
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/fr24feed-debian-ubuntu-amd64/master/install-dump1090-mut-v1.15.sh)"` </br></br>
 
-> **Option (2): For Debian 10, 11 and Ubuntu 18, 20 & 22 (dump1090-mutability EB_VERSION)** </br>
+ **Option (2): For Debian 10, 11 and Ubuntu 18, 20 & 22 (dump1090-mutability EB_VERSION)** </br>
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/fr24feed-debian-ubuntu-amd64/master/install-dump1090-mut-eb-ver.sh)"`  </br></br>
 
-> **Option (3) For Debian 9, 10, & 11 and Ubuntu 18, 20, & 22 (dump1090-fa)** </br>
+ **Option (3) For Debian 9, 10, & 11 and Ubuntu 18, 20, & 22 (dump1090-fa)** </br>
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/fr24feed-debian-ubuntu-amd64/master/install-dump1090-fa.sh)"` </br></br>
 </br>
 
