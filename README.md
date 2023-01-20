@@ -1,62 +1,43 @@
 # fr24feed-debian-ubuntu-amd64
-## (1) FlightRadar24 data feeder installation script for Debian 9 & 10 amd64 / Ubuntu 18.04 amd64 on 64bit Intel CPU
-## (2) dump1090 (mutability and flightaware) installation script for Debian 9 & 10 amd64 / Ubuntu 18.04 amd64 on 64bit Intel CPU
+### Installation of (1) Decoder (dump1090-mutability OR dump1090-fa) AND (2) FlightRadar24 data feeder on Debian 9, 10 & 11 amd64 / Ubuntu 18, 20, 22 amd64
 </br>
 
-### INSTALL FR24FEED: 
-**Copy-paste following command in SSH console and press Enter key. </br>
-The script will install and configure fr24feed.** </br></br>
-`sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/fr24feed-debian-ubuntu-amd64/master/install-fr24feed_1.0.25-3_amd64.tgz.sh)"` </br></br></br>
-
-**Caution:** </br>
-MLAT is supported only for Raspberry Pi feeder. </br>
-For x86 amd64 feeders, in settings choose mlat=no. </br>
-Setting mlat=yes will result in fr24feed failing with "segmentation fault". </br>
 
 
-### INSTALL DUMP1090:
-The above fr24feed install script does **NOT** install or include installation of lighttpd and any version of dump1090. </br>
-The user should himself/herself install lighttpd and dump1090 (mutability or flightaware version) </br>
-Below are scripts which will install lighttpd and dump1090-mutability / dump1090-fa. </br></br>
+### STEP-1: INSTALL DUMP1090:
+Below are scripts which will install lighttpd (essential to display map), and dump1090-mutability / dump1090-fa. </br></br>
 **Caution:** </br>
 Install only ONE of following three versions of dump1090. Installing more than one version of dump1090 will break the installation </br>
 
-> **(1) For Debian 9 and Ubuntu 18 (dump1090-mutability ver 1.15)** </br>
+> **Option (1): For Debian 9 and Ubuntu 18 (dump1090-mutability ver 1.15)** </br>
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/fr24feed-debian-ubuntu-amd64/master/install-dump1090-mut-v1.15.sh)"` </br></br>
 
-> **(2) For Debian 10 and Ubuntu 19 (dump1090-mutability EB_VERSION)** </br>
+> **Option (2): For Debian 10, 11 and Ubuntu 18, 20 & 22 (dump1090-mutability EB_VERSION)** </br>
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/fr24feed-debian-ubuntu-amd64/master/install-dump1090-mut-eb-ver.sh)"`  </br></br>
 
-> **(3) For Debian 9, 10, & 11 and Ubuntu 18, 20, & 22 (dump1090-fa)** </br>
+> **Option (3) For Debian 9, 10, & 11 and Ubuntu 18, 20, & 22 (dump1090-fa)** </br>
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/fr24feed-debian-ubuntu-amd64/master/install-dump1090-fa.sh)"` </br></br>
 </br>
 
-## FR24FEED - Post install instructions
-**After FR24 Feeder installation script finishes, it displays following message:**
-```
-INSTALLATION COMPLETED
-=======================
-PLEASE DO FOLLOWING:
-=======================
-(1) SIGNUP:
-   (a) If you already have a feeder key,
-       open file fr24feed.ini by following command and add fr24key:
-           sudo nano /etc/fr24feed.ini
-       Save (Ctrl+o) and Close (Ctrl+x) file fr24feed.ini
-       then restart fr24feed by following command:
-           sudo systemctl restart fr24feed
 
-   (b) Alternatively signup using following command
-         sudo nano fr24feed --signup
+#### STEP-2: INSTALL FR24FEED: 
+**issue following commands:** </br>
+**(2.1) Download fr24feed debian Package** </br>
+`wget https://repo-feed.flightradar24.com/linux_x86_64_binaries/fr24feed_1.0.34-0_amd64.deb   ` 
+</br></br>
+**(2.2) Install downloaded package** </br>
+`sudo dpkg -i fr24feed_1.0.34-0_amd64.deb  `
+</br></br>
+**(2.3) Signup (for new installs nly. For upgrade of existing installs, skip this step)** </br>
+`sudo fr24feed --signup   `
+</br></br>
+**(2.4) Restart fr24feed** </br>
+`sudo systemctl restart fr24feed   `
+</br></br>
+**(2.5) After restart of fr24feed, wait few minutes, then check status** </br>
+`sudo fr24feed-status   `
 
-(2) In your browser, go to web interface at
-     http://localhost:8754
-
-
-To see status sudo systemctl status fr24feed
-To restart    sudo systemctl restart fr24feed
-To stop       sudo systemctl stop fr24feed
-```
+</br></br></br>
 
 **CONFIGURATION OF FR24FEED** </br>
 The configuration file can be edited by following command; </br>
@@ -66,42 +47,33 @@ Default setting are for a decoder like dump1090-mutability or dump1090-fa runnin
 This can be changed by editing config file</br>
 
 ```
-receiver="beast-tcp"
-host="127.0.0.1:30005"
+receiver="avr-tcp"
+host="127.0.0.1:30002"
 fr24key=""
 
 bs="no"
 raw="no"
 logmode="1"
 logpath="/var/log/fr24feed/"
-windowmode="0"
-mpx="no"
-mlat="no"
-mlat-without-gps="no"
-use-http=yes
-http-timeout=20
+mlat="yes"
+mlat-without-gps="yes"
 
 ```
 </br>
 
 
 **TO UNINSTALL FR24FEED** </br>
-To completely remove configuration and all files, give following 7 commands:
+To completely remove configuration and all files, give following commands:
 ```
 sudo systemctl stop fr24feed 
-sudo systemctl disable fr24feed 
-sudo rm /lib/systemd/system/fr24feed.service
-sudo rm -rf /usr/share/fr24 
-sudo rm /usr/bin/fr24feed
-sudo rm /etc/fr24feed.ini 
-sudo rm -rf /var/log/fr24feed  
+
+sudo dpkg --purge fr24feed  
 ```
 
 </br>
 
-## DUMP1090 - Post install instructions </br>
 
-**CONFIGURING / CHANGING SETTINGS** </br>
+**DUMP1090 CONFIGURING / CHANGING SETTINGS** </br>
 
 **dump1090-mutability, method 1** </br>
 ```
