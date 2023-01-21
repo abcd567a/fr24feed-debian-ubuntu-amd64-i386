@@ -1,0 +1,58 @@
+#!/bin/bash
+
+. /lib/lsb/init-functions
+
+MONITOR_FILE=/dev/shm/decoder.txt
+
+systemctl status fr24feed 2>&1 >/dev/null || {
+    log_failure_msg "FR24 Feeder/Decoder Process"
+    exit 0
+}
+
+log_success_msg "FR24 Feeder/Decoder Process: running"
+
+DATE=`grep time_update_utc_s= ${MONITOR_FILE} 2>/dev/null | cut -d'=' -f2`
+log_success_msg "FR24 Stats Timestamp: $DATE"
+
+
+FEED=`grep 'feed_status=' ${MONITOR_FILE} 2>/dev/null | cut -d'=' -f2`
+if [ "$FEED" == "" ]; then
+    FEED="unknown"
+fi
+
+if [ "$FEED" == "connected" ]; then
+    MODE=`grep feed_current_mode= ${MONITOR_FILE} 2>/dev/null | cut -d'=' -f2`
+    log_success_msg "FR24 Link: $FEED [$MODE]"
+    FEED=`grep feed_alias= ${MONITOR_FILE} 2>/dev/null | cut -d'=' -f2`
+    log_success_msg "FR24 Radar: $FEED"
+    FEED=`grep feed_num_ac_tracked= ${MONITOR_FILE} 2>/dev/null | cut -d'=' -f2`
+    log_success_msg "FR24 Tracked AC: ${FEED}"
+else
+    log_failure_msg "FR24 Link: $FEED"
+fi
+
+RX=`grep rx_connected= ${MONITOR_FILE} 2>/dev/null | cut -d'=' -f2`
+RX1=`grep num_messages= ${MONITOR_FILE} 2>/dev/null | cut -d'=' -f2`
+RX2=`grep num_resyncs= ${MONITOR_FILE} 2>/dev/null | cut -d'=' -f2`
+
+if [ "$RX" == "1" ]; then
+    log_success_msg "Receiver: connected ($RX1 MSGS/$RX2 SYNC)"
+else
+    log_failure_msg "Receiver: down"
+fi
+
+MLAT=`grep 'mlat-ok=' ${MONITOR_FILE} 2>/dev/null | cut -d'=' -f2`
+if [ "$MLAT" == "" ]; then
+    MLAT="unknown"
+fi
+
+if [ "$MLAT" == "YES" ]; then
+    MLAT_MODE=`grep mlat-mode= ${MONITOR_FILE} 2>/dev/null | cut -d'=' -f2`
+    log_success_msg "FR24 MLAT: ok [$MLAT_MODE]"
+    MLAT_SEEN=`grep mlat-number-seen= ${MONITOR_FILE} 2>/dev/null | cut -d'=' -f2`
+    log_success_msg "FR24 MLAT AC seen: $MLAT_SEEN"
+else
+    log_failure_msg "FR24 MLAT: not running"
+fi
+
+
