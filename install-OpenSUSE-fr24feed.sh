@@ -58,6 +58,8 @@ WantedBy=multi-user.target
 EOM
 sudo chmod 644 ${SERVICE_FILE}
 
+sudo useradd --system fr24
+
 sudo systemctl enable fr24feed
 
 sudo mkdir -p /lib/lsb
