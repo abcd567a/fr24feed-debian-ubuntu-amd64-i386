@@ -80,7 +80,7 @@ sudo nano /usr/share/dump1090-mutability/html/config.js
 ```
 sudo nano etc/default/dump1090-fa
 
-sudo nano /usr/share/dump1090-fa/html/config.js
+sudo nano /usr/share/skyaware/html/config.js
 ```
 
 </br></br>
