@@ -13,10 +13,10 @@ Install only ONE of following three options. Installing more than one version of
  **OPTION (1): dump1090-mutability ver 1.15 (Only for Debian 9 and Ubuntu 18)** </br>
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/fr24feed-debian-ubuntu-amd64/master/install-dump1090-mut-v1.15.sh)"` </br></br>
 
- **OPTION (2): dump1090-mutability EB_VERSION (Only for Debian 10, 11 and Ubuntu 20 & 22)** </br>
+ **OPTION (2): dump1090-mutability EB_VERSION (Only for Debian 10, 11, 12 and Ubuntu 20 & 22)** </br>
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/fr24feed-debian-ubuntu-amd64/master/install-dump1090-mut-eb-ver.sh)"`  </br></br>
 
- **OPTION (3) dump1090-fa (For Debian 9, 10, & 11 and Ubuntu 18, 20, & 22)** </br>
+ **OPTION (3) dump1090-fa (For Debian 9, 10, 11 & 12 and Ubuntu 18, 20, & 22)** </br>
 `sudo bash -c "$(wget -O - https://raw.githubusercontent.com/abcd567a/fr24feed-debian-ubuntu-amd64/master/install-dump1090-fa.sh)"` </br></br>
 </br>
 
