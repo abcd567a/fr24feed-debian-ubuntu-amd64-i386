@@ -23,7 +23,8 @@ Install only ONE of following three options. Installing more than one version of
 
 ## STEP-2 of 2: INSTALL FR24FEED: 
 **(2.1) Download fr24feed debian Package** </br>
-`wget https://repo-feed.flightradar24.com/linux_x86_64_binaries/fr24feed_1.0.44-0_amd64.deb   ` 
+
+`wget https://repo-feed.flightradar24.com/linux_binaries/fr24feed_1.0.44-0_amd64.deb`
 </br></br>
 **(2.2) Install downloaded package** </br>
 `sudo dpkg -i fr24feed_1.0.44-0_amd64.deb  `
