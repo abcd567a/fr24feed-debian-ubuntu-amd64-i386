@@ -47,7 +47,7 @@ First determine architecture of your Computer/OS by issuing following command: <
 </br></br>
 
 
-**(2.5) SIGNUP (for NEW installs only). </br>For upgrade of EXISTING installs, skip this step)** </br>
+**(2.5) SIGNUP (for NEW installs only). </br>For upgrade of EXISTING installs, skip this step** </br>
 `sudo fr24feed --signup   `
 </br></br>
 **(2.6) Restart fr24feed** </br>
