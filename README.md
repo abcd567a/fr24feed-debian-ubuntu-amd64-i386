@@ -21,21 +21,34 @@ Install only ONE of following three options. Installing more than one version of
 </br>
 
 
-## STEP-2 of 2: INSTALL FR24FEED: 
-**(2.1) Download fr24feed debian Package** </br>
+## STEP-2 of 2: INSTALL FR24FEED:
+#### If command `uname -m ` outputs `x86_64` or `amd64`, then follow steps **2.1** and **2.2** </br>
+#### If command `uname -m ` outputs `i386` or `i686`, then follow steps **2.3** and **2.4** </br>
+</br>
 
+### amd64 / x86_64
+**(2.1) Download fr24feed x86_64/amd64 debian Package** </br>
 `wget https://repo-feed.flightradar24.com/linux_binaries/fr24feed_1.0.46-1_amd64.deb`
 </br></br>
-**(2.2) Install downloaded package** </br>
+**(2.2) Install downloaded x86_64/amd64 package** </br>
 `sudo dpkg -i fr24feed_1.0.46-1_amd64.deb  `
 </br></br>
-**(2.3) Signup (for NEW installs only. For upgrade of EXISTING installs, skip this step)** </br>
+### i386 or i686
+**(2.3) Download fr24feed debian i386 Package** </br>
+`wget https://repo-feed.flightradar24.com/linux_binaries/fr24feed_1.0.46-1_i386.deb `
+</br></br>
+**(2.4) Install downloaded  i386 package** </br>
+`sudo dpkg -i fr24feed_1.0.46-1_i386.deb `
+</br></br>
+
+
+**(2.5) Signup (for NEW installs only. For upgrade of EXISTING installs, skip this step)** </br>
 `sudo fr24feed --signup   `
 </br></br>
-**(2.4) Restart fr24feed** </br>
+**(2.6) Restart fr24feed** </br>
 `sudo systemctl restart fr24feed   `
 </br></br>
-**(2.5) After restart of fr24feed, wait few minutes, then check status** </br>
+**(2.7) After restart of fr24feed, wait few minutes, then check status** </br>
 `sudo fr24feed-status   `
 
 </br></br>
