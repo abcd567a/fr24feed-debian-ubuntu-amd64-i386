@@ -7,29 +7,26 @@
 
 
 ## STEP-1 of 2: INSTALL DUMP1090:
-**Caution:** </br>
+**CAUTION:** </br>
 Install only ONE of following three options. Installing more than one version of dump1090 will break the installation </br>
 
  **OPTION (1): dump1090-mutability ver 1.15 (Only for Debian 9 and Ubuntu 18)** </br>
 `sudo bash -c "$(wget -O - https://github.com/abcd567a/fr24feed-debian-ubuntu-amd64-i386/raw/master/install-dump1090-mut-v1.15.sh)"` </br></br>
 
- **OPTION (2): dump1090-mutability EB_VERSION (Only for Debian 10, 11, 12 and Ubuntu 20, 22, 23 & 24)** </br>
-<S>`sudo bash -c "$(wget -O - https://github.com/abcd567a/fr24feed-debian-ubuntu-amd64-i386/raw/master/install-dump1090-mut-eb-ver.sh)"`</S>  </br>
-```
-sudo apt update  
-sudo apt install dump1090-mutability
-sudo usermod -a -G plugdev dump1090
-sudo reboot
-
-```
+**OPTION (2): dump1090-mutability EB_VERSION (Only for Debian 10, 11, 12 and Ubuntu 20, 22, 23 & 24)** </br>
+`sudo apt update  ` </br>
+`sudo apt install dump1090-mutability  ` </br>
+`sudo usermod -a -G plugdev dump1090  ` </br>
+`sudo reboot  ` </br>
 </br>
 
- **OPTION (3) dump1090-fa (For Debian 9, 10, 11 & 12 and Ubuntu 18, 20, 22, 23, & 24)** </br>
+**OPTION (3) dump1090-fa (For Debian 9, 10, 11 & 12 and Ubuntu 18, 20, 22, 23, & 24)** </br>
 `sudo bash -c "$(wget -O - https://github.com/abcd567a/fr24feed-debian-ubuntu-amd64-i386/raw/master/install-dump1090-fa.sh)"` </br></br>
 </br>
-
-
 ## STEP-2 of 2: INSTALL FR24FEED:
+First determine architecture of your Computer/OS by issuing following command: </br>
+`uname -m  `
+</br>
 #### If command `uname -m ` outputs `x86_64` or `amd64`, then follow steps **2.1** and **2.2** </br>
 #### If command `uname -m ` outputs `i386` or `i686`, then follow steps **2.3** and **2.4** </br>
 </br>
@@ -50,7 +47,7 @@ sudo reboot
 </br></br>
 
 
-**(2.5) Signup (for NEW installs only. For upgrade of EXISTING installs, skip this step)** </br>
+**(2.5) SIGNUP (for NEW installs only). </br>For upgrade of EXISTING installs, skip this step)** </br>
 `sudo fr24feed --signup   `
 </br></br>
 **(2.6) Restart fr24feed** </br>
