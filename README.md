@@ -1,4 +1,4 @@
-# fr24feed-debian-ubuntu-amd64
+# fr24feed-debian-ubuntu-amd64-i386
 ## Installation of FlightRadar24 data feeder on amd64/x86_64 and i386/i686 on Debian 9, 10, 11, & 12 and on Ubuntu 18, 20, 22, 23, & 24 </br> 
 ### IMPORTANT: </br> FIRST Install Decoder dump1090 </br> Only AFTER installing dump1090, Install Flightradar24 Data Feeder fr24feed
 
