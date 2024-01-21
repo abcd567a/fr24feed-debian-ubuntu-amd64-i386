@@ -22,13 +22,14 @@ dpkg-buildpackage -b
 echo ""
 echo -e "\e[33mINSTALLING THE DUMP1090-MUTABILITY PACKAGE ....\e[39m"
 cd ../
-dpkg -i dump1090-mutability_1.15~2018*.deb
+dpkg -i dump1090-mutability_1.15~*.deb
 echo ""
 lighty-enable-mod dump1090
 systemctl force-reload lighttpd
 echo ""
 echo -e "\e[33mWORKAROUND (Ajax call Failure) ....\e[39m"
 wget -O  /etc/udev/rules.d/rtl-sdr.rules "https://raw.githubusercontent.com/osmocom/rtl-sdr/master/rtl-sdr.rules"
+usermod -a -G plugdev dump1090
 echo ""
 echo -e "\e[33mConfiguring dump1090-mutability...\e[39m"
 dpkg-reconfigure dump1090-mutability
