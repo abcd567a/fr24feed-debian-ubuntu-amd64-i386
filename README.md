@@ -24,7 +24,7 @@ sudo reboot
 ```
 </br>
 
- **OPTION (3) dump1090-fa (For Debian 9, 10, 11 & 12 and Ubuntu 18, 20, & 22)** </br>
+ **OPTION (3) dump1090-fa (For Debian 9, 10, 11 & 12 and Ubuntu 18, 20, 22, 23, & 24)** </br>
 `sudo bash -c "$(wget -O - https://github.com/abcd567a/fr24feed-debian-ubuntu-amd64-i386/raw/master/install-dump1090-fa.sh)"` </br></br>
 </br>
 
