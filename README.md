@@ -69,11 +69,10 @@ This can be changed by editing config file</br>
 receiver="avr-tcp"
 host="127.0.0.1:30002"
 fr24key="xxxxxxxxxxx"
+logmode="1"
 
 bs="no"
 raw="no"
-logmode="1"
-logpath="/var/log/fr24feed/"
 mlat="no"
 mlat-without-gps="no"
 
