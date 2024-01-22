@@ -122,7 +122,7 @@ To completely remove configuration and all files, give following commands: </br>
 To completely remove configuration and all files, give following 7 commands: </br>
 
 `sudo dpkg --purge dump1090-fa  ` </br>
-`sudo apt purge lighttpd  ` </br.
+`sudo apt purge lighttpd  ` </br>
 `sudo apt autoremove  ` </br>
 `sudo rm -rf /var/www/html  ` </br>
 `sudo rm -rf /etc/lighttpd  ` </br>
