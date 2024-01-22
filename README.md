@@ -63,7 +63,7 @@ The configuration file can be edited by following command; </br></br>
 `sudo nano /etc/fr24feed.ini` </br></br>
 **Shown below are contents of file `/etc/fr24feed.ini`, when following 2 conditions are met:** </br>
 
-(1) A decoder like dump1090-mutability or dump1090-fa running on the Computer. </br>
+(1) A decoder like dump1090-mutability or dump1090-fa is installed and running on the Computer. </br>
 
 (2) during `--signup` OR `--reconfigure`, you have said **yes** to following question:</br>
 
