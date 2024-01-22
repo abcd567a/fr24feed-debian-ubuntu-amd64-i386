@@ -61,10 +61,13 @@ First determine architecture of your Computer/OS by issuing following command: <
 **(1) CONFIGURATION OF FR24FEED** </br>
 The configuration file can be edited by following command; </br></br>
 `sudo nano /etc/fr24feed.ini` </br></br>
-**Contents of FR24FEED config file when during signup you say yes to question default config (yes/no)**</br>
-Default setting are for a decoder like dump1090-mutability or dump1090-fa running on the Computer. </br>
-This can be changed by editing config file</br>
+**Shown below are contents of file `/etc/fr24feed.ini`, when following 2 conditions are met:** </br>
 
+(1) A decoder like dump1090-mutability or dump1090-fa running on the Computer. </br>
+
+(2) during `--signup` OR `--reconfigure`, you have said **yes** to following question:</br>
+
+Would you like to use autoconfig (\*yes\*/no) </br>
 ```
 receiver="avr-tcp"
 host="127.0.0.1:30002"
@@ -73,8 +76,8 @@ logmode="1"
 
 bs="no"
 raw="no"
-mlat="no"
-mlat-without-gps="no"
+mlat="yes"
+mlat-without-gps="yes"
 
 ```
 
