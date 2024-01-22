@@ -28,10 +28,9 @@ First determine architecture of your Computer/OS by issuing following command: <
 `uname -m  `
 </br>
 #### If command `uname -m ` outputs `x86_64` or `amd64`, then follow steps **2.1** and **2.2** </br>
-#### If command `uname -m ` outputs `i386` or `i686`, then follow steps **2.3** and **2.4** </br>
-</br>
+#### If command `uname -m ` outputs `i386` or `i686`, then follow steps **2.3** and **2.4** </br></br>
 
-### amd64 / x86_64
+### x86_64 or amd64
 **(2.1) Download fr24feed x86_64/amd64 debian Package** </br>
 `wget https://repo-feed.flightradar24.com/linux_binaries/fr24feed_1.0.46-1_amd64.deb`
 </br></br>
@@ -60,7 +59,7 @@ First determine architecture of your Computer/OS by issuing following command: <
 ## CONFIGURATION
 
 **(1) CONFIGURATION OF FR24FEED** </br>
-The configuration file can be edited by following command; </br>
+The configuration file can be edited by following command; </br></br>
 `sudo nano /etc/fr24feed.ini` </br></br>
 **Default contents of FR24FEED config file**</br>
 Default setting are for a decoder like dump1090-mutability or dump1090-fa running on the Computer. </br>
@@ -83,59 +82,50 @@ mlat-without-gps="yes"
 **(2) CONFIGURING OF dump1090-mutability** </br>
 
 **Method 1** </br>
-```
-sudo dpkg-reconfigure dump1090-mutability
-```
+`sudo dpkg-reconfigure dump1090-mutability  `
 </br>
 
 **Method 2** </br>
-```
-sudo nano etc/default/dump1090-mutability
+`sudo nano etc/default/dump1090-mutability  ` </br>
+`sudo nano /usr/share/dump1090-mutability/html/config.js  ` </br>
 
-sudo nano /usr/share/dump1090-mutability/html/config.js
-```
 
 **(3) CONFIGURING OF dump1090-fa** </br>
-```
-sudo nano etc/default/dump1090-fa
-
-sudo nano /usr/share/skyaware/html/config.js
-```
-
-</br></br>
+`sudo nano etc/default/dump1090-fa  ` </br>
+`sudo nano /usr/share/skyaware/html/config.js  ` </br>
+</br>
 
 ## UNINSTALL </br>
 **(1) TO UNINSTALL FR24FEED** </br>
-To completely remove configuration and all files, give following commands:
-```
-sudo systemctl stop fr24feed 
+To completely remove configuration and all files, give following commands:</br>
 
-sudo dpkg --purge fr24feed  
-```
+`sudo systemctl stop fr24feed ` </br>
+`sudo dpkg --purge fr24feed  ` </br>
+`sudo rm -rf /usr/lib/fr24  ` </br>
 
-</br>
 
 **(2) TO UNINSTALL dump1090-mutability (ver 1.15~dev and EB_VERSION)** </br>
-To completely remove configuration and all files, give following 6 commands: </br>
-```
-sudo dpkg --purge dump1090-mutability
-sudo apt purge lighttpd
-sudo apt autoremove
-sudo rm -rf /var/www/html
-sudo rm -rf /etc/lighttpd
-sudo rm -rf /usr/share/dump1090-mutability
-```
+To completely remove configuration and all files, give following commands: </br>
+
+`sudo dpkg --purge dump1090-mutability  ` </br>
+`sudo apt purge dump1090-mutability  ` </br>
+`sudo apt purge lighttpd  ` </br>
+`sudo apt autoremove  ` </br>
+`sudo rm -rf /var/www/html  ` </br>
+`sudo rm -rf /etc/lighttpd  ` </br>
+`sudo rm -rf /usr/share/dump1090-mutability  ` </br>
+
 
 </br>
 
 **(3) TO UNINSTALL dump1090-fa** </br>
 To completely remove configuration and all files, give following 7 commands: </br>
-```
-sudo dpkg --purge dump1090-fa
-sudo apt purge lighttpd
-sudo apt autoremove
-sudo rm -rf /var/www/html
-sudo rm -rf /etc/lighttpd
-sudo rm -rf /usr/share/dump1090-fa
-sudo rm -rf /usr/share/skyaware
-```
+
+`sudo dpkg --purge dump1090-fa  ` </br>
+`sudo apt purge lighttpd  ` </br.
+`sudo apt autoremove  ` </br>
+`sudo rm -rf /var/www/html  ` </br>
+`sudo rm -rf /etc/lighttpd  ` </br>
+`sudo rm -rf /usr/share/dump1090-fa  ` </br>
+`sudo rm -rf /usr/share/skyaware  ` </br>
+
