@@ -88,12 +88,12 @@ mlat-without-gps="yes"
 </br>
 
 **Method 2** </br>
-`sudo nano etc/default/dump1090-mutability  ` </br>
+`sudo nano /etc/default/dump1090-mutability  ` </br>
 `sudo nano /usr/share/dump1090-mutability/html/config.js  ` </br>
 
 
 **(3) CONFIGURING OF dump1090-fa** </br>
-`sudo nano etc/default/dump1090-fa  ` </br>
+`sudo nano /etc/default/dump1090-fa  ` </br>
 `sudo nano /usr/share/skyaware/html/config.js  ` </br>
 </br>
 
