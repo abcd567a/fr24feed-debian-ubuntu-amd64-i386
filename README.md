@@ -49,7 +49,9 @@ First determine architecture of your Computer/OS by issuing following command: <
 **(2.5) SIGNUP (for NEW installs only). </br>For upgrade of EXISTING installs, skip this step** </br>
 `sudo fr24feed --signup   `
 </br></br>
-**(2.6) Restart fr24feed** </br>
+**(2.6) Enable & Restart fr24feed** </br>
+`sudo systemctl enable fr24feed   `
+
 `sudo systemctl restart fr24feed   `
 </br></br>
 **(2.7) After restart of fr24feed, wait few minutes, then check status** </br>
