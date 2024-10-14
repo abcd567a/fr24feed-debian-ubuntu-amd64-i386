@@ -24,6 +24,17 @@ Install only ONE of following three options. Installing more than one version of
 `sudo bash -c "$(wget -O - https://github.com/abcd567a/fr24feed-debian-ubuntu-amd64-i386/raw/master/install-dump1090-fa.sh)"` </br></br>
 </br>
 ## STEP-2 of 2: INSTALL FR24FEED:
+**OPTION-1 (Easy & automated by script)** </br>
+(1) Copy-paste following command in terminal / PuTTY and press Enter Key </br></br>
+`wget -qO- https://fr24.com/install.sh | sudo bash -s `
+</br></br>
+(2) After installation & configuration is completed, enable & Restart fr24feed </br>
+`sudo systemctl enable fr24feed   `
+
+`sudo systemctl restart fr24feed   `
+</br></br>
+</br></br>
+**OPTION-2 (Manual)** </br>
 First determine architecture of your Computer/OS by issuing following command: </br>
 `uname -m  `
 </br>
