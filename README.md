@@ -43,17 +43,17 @@ First determine architecture of your Computer/OS by issuing following command: <
 
 ### x86_64 or amd64
 **(2.1) Download fr24feed x86_64/amd64 debian Package** </br>
-`wget https://repo-feed.flightradar24.com/linux_binaries/fr24feed_1.0.52-0_amd64.deb `
+`wget https://repo-feed.flightradar24.com/linux_binaries/fr24feed_1.0.54-0_amd64.deb `
 </br></br>
 **(2.2) Install downloaded x86_64/amd64 package** </br>
-`sudo dpkg -i fr24feed_1.0.52-0_amd64.deb  `
+`sudo dpkg -i fr24feed_1.0.54-0_amd64.deb  `
 </br></br>
 ### i386 or i686
 **(2.3) Download fr24feed debian i386 Package** </br>
-`wget https://repo-feed.flightradar24.com/linux_binaries/fr24feed_1.0.52-0_i386.deb `
+`wget https://repo-feed.flightradar24.com/linux_binaries/fr24feed_1.0.54-0_i386.deb `
 </br></br>
 **(2.4) Install downloaded  i386 package** </br>
-`sudo dpkg -i fr24feed_1.0.52-0_i386.deb `
+`sudo dpkg -i fr24feed_1.0.54-0_i386.deb `
 </br></br>
 
 
