@@ -18,9 +18,13 @@ Install only ONE of following three options. Installing more than one version of
 `sudo apt install dump1090-mutability  ` </br>
 `sudo usermod -a -G plugdev dump1090  ` </br>
 `sudo reboot  ` </br>
+
+**OPTION (3): dump1090-mutability EB_VERSION (Only for Debian 13 Trixie)** </br>
+<https://github.com/abcd567a/Install-dump1090-mutability-on-trixie/blob/master/README.md>
+
 </br>
 
-**OPTION (3) dump1090-fa (For Debian 9, 10, 11 & 12 and Ubuntu 18, 20, 22, 23, & 24)** </br>
+**OPTION (4) dump1090-fa (For Debian 9, 10, 11, 12 & 13 and Ubuntu 18, 20, 22, 23, & 24)** </br>
 `sudo bash -c "$(wget -O - https://github.com/abcd567a/fr24feed-debian-ubuntu-amd64-i386/raw/master/install-dump1090-fa.sh)"` </br></br>
 </br>
 ## STEP-2 of 2: INSTALL FR24FEED:
